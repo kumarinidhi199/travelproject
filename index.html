@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>  TripTour</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-
+Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="bootstrap-social/bootstrap-social.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+<div class="container">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="40" width="25"></a>
+<div class="collapse navbar-collapse" id="Navbar">
+<ul class="navbar-nav mr-auto">
+<li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+<li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+<li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Services</a></li>
+<li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>
+Contact</a></li>
+</ul>
+<span class="navbar-text">
+<a data-toggle="modal" data-target="#loginModal">
+<span class="fa fa-sign-in"></span>Register
+</a>
+</span>
+</div>
+</div>
+</nav>
+
+<div id="loginModal" class="modal fade" role="dialog">
+<div class="modal-dialog modal-lg" role="content">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title">Register</h4>
+<button type="button" class="close" data-dismiss="modal">
+&times;
+</button>
+</div>
+
+<div class="modal-body">
+<form>
+<div class="form-row">
+<div class="form-group col-sm-4">
+<label class="sr-only" for="exampleInputname">Name</label>
+<input type="Name" class="form-control form-control-sm mr-1" id="exampleInputname" placeholder="Name">
+</div>
+<div class="form-group col-sm-4">
+<label class="sr-only" for="exampleInputPassword3">Address</label>
+<input type="Address" class="form-control form-control-sm mr-1" id="exampleInputaddress"
+placeholder="address">
+</div>
+<div class="form-group col-sm-4">
+    <label class="sr-only" for="exampleInputPassword3">Phone number</label>
+    <input type="Phone no" class="form-control form-control-sm mr-1" id="exampleInputphoneno"
+    placeholder="Phone number">
+</div>  
+<div class="form-group col-sm-4">
+   <label class="sr-only" for="exampleInputPassword3">Place to travel</label>
+   <input type="PLace" class="form-control form-control-sm mr-1" id="exampleInputplacetotravel"
+   placeholder="Placetotravel">
+</div>  
+
+<div class="col-sm-auto">
+<div class="form-check">
+<input class="form-check-input" type="checkbox">
+<label class="form-check-label"> all details are mandatory
+</label>
+</div>
+</div>
+</div>
+<div class="form-row">
+<button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+<button type="submit" class="btn btn-primary btn-sm ml-1">Sign-in</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div id="cardModal" class="modal fade" role="dialog">
+<div class="modal-dialog modal-lg" role="content">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title"> Hotel Booking</h3>
+<button type="button" class="close" data-dismiss="modal">
+&times;
+</button>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-sm-2" style="padding-bottom: 10px;">Hotel near me</div>
+<div class="col-sm-6">
+<input type="Name" class="form-control form-control-sm mr-1" id="exampleInputname" placeholder="Hotel name">
+</div>
+</div>
+<div class="col-sm-2" style="padding-bottom: 20px;">Number of people</div>
+<div class="col-sm-6">
+<div class="radiobutton">
+<label>
+<input type="radio" name="options" id="option1" autocomplete="off"> 0-5
+</label>
+<label>
+   <input type="radio" name="options" id="option1" autocomplete="off"> 5-10
+</label>
+<label>
+   <input type="radio" name="options" id="option1" autocomplete="off"> 10-15
+</label>
+    
+<label>
+<input type="radio" name="options" id="option2" autocomplete="off"> 15-20 
+</label>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-2" style="padding-bottom: 30px;">Section</div>
+<div class="col-sm-6">
+<div class="radiobutton">
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+<label class="btn btn-success btn-sm active">
+<input type="radio" name="options" id="option1" autocomplete="off" checked> Vegetarin
+</label>
+<label class="btn btn-danger btn-sm">
+<input type="radio" name="options" id="option2" autocomplete="off"> Non-vegetarian
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-2" style="padding-bottom: 10px;">Date and Time</div>
+<form>
+<div class="form-group row" style="padding-left: 14px; padding-right: 14px;">
+<div class="col-sm">
+<input type="text" class="form-control" id="date" name="date" placeholder="Date">
+</div>
+<div class="col-sm">
+<input type="text" class="form-control" id="time" name="time" placeholder="Time">
+</div>
+</div>
+<div class="form-group row" style="padding-left: 14px;">
+<div class="col-12" style="padding-top: 30px;">
+
+<button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>
+<button type="submit" class="btn btn-primary ml-1">Reserve</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<header class="jumbotron">
+<div class="container">
+<div class="row row-header">
+<div class="col-12 col-sm-6">
+<h1>TripTour</h1>
+<p>Travel to live,live to travel</p>
+</div>
+<div class="col-12 col-sm align-self-center">
+<img src="img/logoIndia.png" height="80" width="80" class="img-fluid">
+</div>
+<div class="col-12 col-sm align-self-center">
+<a data-toggle="modal" data-target="#cardModal">
+<button type="button" style="color:black; font-weight: 500;" class="btn btn-warning btn-sm btn-block">Hotel Booking</button></a>
+</div>
+</div>
+</div>
+</header>
+<div class="container">
+<div class="row row-content">
+<div class="col">
+<div id="mycarousel" class="carousel slide" data-ride="carousel">
+<div class="carousel-inner" role="listbox">
+<div class="carousel-item active">
+<img class="d-block img-fluid" src="img/tajmahalimages.jfif" alt="Tajmahal">
+<div class="carousel-caption d-none d-md-block">
+<h2>Taj Mahal</h2>
+<p class="d-none d-sm-block">The Taj Mahal is an ivory-white marble mausoleum on the southern bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal; it also houses the tomb of Shah Jahan.
+</p>
+</div>
+</div>
+<div class="carousel-item">
+
+<img class="d-block img-fluid" src="img/IndiaGate.jfif" alt="buffet">
+<div class="carousel-caption d-none d-md-block">
+<h3 style="font-size: 30px;">India Gate</h3>
+<p class="d-none d-sm-block">The India Gate is a war memorial located astride the Rajpath, on the eastern edge of the "ceremonial axis" of New Delhi, formerly called Kingsway.
+</p>
+</div>
+</div>
+<div class="carousel-item">
+<img class="d-block img-fluid" src="img/redfort.jfif" alt="redfort">
+<div class="carousel-caption d-none d-md-block">
+<h2>Red Fort</h2>
+
+<p class="d-none d-sm-block"> The Red Fort is a historic fort in the city of Delhi in India that served as the main residence of the Mughal Emperors. Emperor Shah Jahan commissioned construction of the Red Fort on 12 May 1638, when he decided to shift his capital from Agra to Delhi.
+</p>
+</div>
+</div>
+<div class="carousel-item">
+<img class="d-block img-fluid" src="img/Qutabminar.jfif" alt="Qutabminar">
+<div class="carousel-caption d-none d-md-block">
+<h3 style="font-size: 30px;">Qutab Minar</h3>
+<p class="d-none d-sm-block">The Qutb Minar, also spelled as Qutub Minar and Qutab Minar, is a minaret and "victory tower" that forms part of the Qutb complex, a UNESCO World Heritage Site in the Mehrauli area of New Delhi, India. The height of Qutb Minar is 72.5 meters, making it the tallest minaret in the world built of bricks.
+</p>
+</div>
+</div>
+<div class="carousel-item">
+<img class="d-block img-fluid" src="img/mysorepalace.jfif" alt="mysorepalace">
+<div class="carousel-caption d-none d-md-block">
+<h3 style="font-size: 30px;">Mysore Palace
+</h3>
+<p class="d-none d-sm-block">The Mysore Palace is a historical palace and the royal residence at Mysore in the Indian State of Karnataka. It is the official residence of the Wadiyar dynasty and the seat of the Kingdom of Mysore. The palace is in the centre of Mysore, and faces the Chamundi Hills eastward.
+
+</p>
+</div>
+</div>
+<div class="carousel-item">
+<img class="d-block img-fluid" src="img/botanicalgarden.jpg" alt="botanicalgarden">
+ <div class="carousel-caption d-none d-md-block">
+<h3 style="font-size: 30px;">Lalbagh Botanical Garden</h3>
+<p class="d-none d-sm-block">Lalbagh Botanical Garden, or shortened Lalbagh, is an old botanical garden in Bengaluru, India. First planned and laid out during the dalavaiship of Hyder Ali and later adorned with unique plant species by his son Tippu, it was later managed under numerous British Superintendents before Indian Independence.
+</p>
+</div>
+</div>  
+</div>
+<ol class="carousel-indicators">
+<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+<li data-target="#mycarousel" data-slide-to="1"></li>
+<li data-target="#mycarousel" data-slide-to="2"></li>
+</ol>
+<a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+<span class="carousel-control-next-icon"></span>
+</a>
+</div>
+</div>
+</div>
+<h3>Never get so busy making a living that you forget to make a life.
+</h3>
+<div class="row row-content align-items-center">
+<div class="col-12 col-sm-4 order-sm-last col-md-3"><h3>Tour near Bihar</h3>
+</div>
+<div class="col col-sm order-sm-first col-md">
+<div class="media">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.9664237177344!2d85.44129001500832!3d25.136825983924325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2e564bc00e413%3A0x5046ed92e53b0deb!2sNalanda%20University!5e0!3m2!1sen!2sin!4v1599391014374!5m2!1sen!2sin" width="400" height="400" frameborder="10px" style="border:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<div class="media-body">
+<h2 class="mt-0">Nalanda University</h2>
+<p class="d-none d-sm-block">Bihar is a state in East India, bordering Nepal. It is divided by the River Ganges, which floods its fertile plains. Important Buddhist pilgrimage sites include the Bodhi Tree in Bodhgaya's Mahabodhi Temple, under which the Buddha allegedly meditated. In the state capital Patna, Mahavir Mandir temple is revered by Hindus, while Sikhs worship at the domed, riverside Gurdwara of Takht Sri Harmandir Sahib Ji.
+
+</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="row row-content align-items-center">
+<div class="col-12 col-sm-4 col-md-3">
+<h3>Tour near Delhi</h3>
+</div>
+<div class="col col-sm col-md ">
+<div class="media">
+<div class="media-body">
+<h3 class="mt-0" style="font-size: 30px;">Taj Mahal</h3>
+<p class="d-none d-sm-block">Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol of India, and the sprawling Jama Masjid mosque, whose courtyard accommodates 25,000 people. Nearby is Chandni Chowk, a vibrant bazaar filled with food carts, sweets shops and spice stalls.
+</p>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14197.60221324001!2d78.0421422!3d27.1751448!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdd2ae4803f767dde!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1599390356323!5m2!1sen!2sin" width="400" height="400" frameborder="10px" style="border:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+</div>
+</div>
+<div class="row row-content align-items-center">
+<div class="col-12 col-sm-4 order-sm-last col-md-3">
+<h3>Tour near Karnataka</h3>
+</div>
+<div class="col col-sm order-sm-first col-md">
+<div class="media">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3991713.51193104!2d74.41396396249999!3d12.305163000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf701103f9a1f9%3A0xc37fbae2a124da0d!2sMysore%20Palace!5e0!3m2!1sen!2sin!4v1599390623794!5m2!1sen!2sin" width="400" height="400" frameborder="10px" style="border:5px;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<div class="media-body">
+
+<h2 class="mt-0"></h2>
+<h4>Mysore Palace</h4>
+<p class="d-none d-sm-block">Karnataka is a state in southwest India with Arabian Sea coastlines. The capital, Bengaluru (formerly Bangalore), is a high-tech hub known for its shopping and nightlife. To the southwest, Mysore is home to lavish temples including Mysore Palace, former seat of the region’s maharajas. Hampi, once the medieval Vijayanagara empire’s capital, contains ruins of Hindu temples, elephant stables and a stone chariot.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="row">
+<div class="col-4 offset-1 col-sm-2">
+
+<h5>Links</h5>
+<ul class="list-unstyled">
+<li><a href="#">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Menu</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</div>
+<div class="col-7 col-sm-5">
+<h5>Our Address</h5>
+<address>
+Chitragupta Nagar<br>
+Kankarbagh, Patna<br>
+India<br>
+<i class="fa fa-phone"></i>: +9112 3456 4082<br>
+<i class="fa fa-fax"></i>: +9112 3456 4082<br>
+<i class="fa fa-envelope"></i>: <a href="mailto:kumarinidhi957084@gmail.com">kumarinidhi957084@gmail.com</a>
+</address>
+</div>
+<div class="col-12 col-sm-4 align-self-center">
+<div class="text-center">
+<a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus" ></i></a>
+<a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fafacebook"></
+i></a>
+<a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+<a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+<a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+<a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+</div>
+</div>
+</div>
+<div class="row justify-content-center">
+<div class="col-auto">
+<p>© Copyright 2020 TripTour</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-
+KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-
+ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-
+JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body></html>
+
